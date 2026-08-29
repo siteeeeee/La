@@ -7,12 +7,7 @@
 <title>حسابداری لوازم التحریر سایه</title>
 
 <style>
-
-*{
-box-sizing:border-box;
-margin:0;
-padding:0;
-}
+*{box-sizing:border-box;margin:0;padding:0}
 
 body{
 font-family:Tahoma,Arial,sans-serif;
@@ -21,21 +16,14 @@ color:#172033;
 min-height:100vh;
 }
 
-button,input{
-font-family:inherit;
-}
-
-button{
-cursor:pointer;
-}
+button,input,select{font-family:inherit}
+button{cursor:pointer}
 
 .app{
 max-width:850px;
 margin:auto;
 padding-bottom:40px;
 }
-
-/* HEADER */
 
 header{
 background:linear-gradient(135deg,#0f172a,#1e293b);
@@ -45,17 +33,8 @@ border-radius:0 0 28px 28px;
 box-shadow:0 8px 25px #0002;
 }
 
-header h1{
-font-size:23px;
-margin-bottom:7px;
-}
-
-header p{
-font-size:12px;
-color:#cbd5e1;
-}
-
-/* NAV */
+header h1{font-size:23px;margin-bottom:7px}
+header p{font-size:12px;color:#cbd5e1}
 
 .nav{
 display:grid;
@@ -79,17 +58,8 @@ background:#0f172a;
 color:#fff;
 }
 
-/* PAGE */
-
-.page{
-display:none;
-}
-
-.page.active{
-display:block;
-}
-
-/* CARDS */
+.page{display:none}
+.page.active{display:block}
 
 .cards{
 display:grid;
@@ -105,10 +75,7 @@ padding:17px;
 box-shadow:0 4px 15px #0000000c;
 }
 
-.card small{
-color:#64748b;
-font-size:11px;
-}
+.card small{color:#64748b;font-size:11px}
 
 .card strong{
 display:block;
@@ -116,23 +83,10 @@ font-size:17px;
 margin-top:9px;
 }
 
-.green{
-color:#15803d;
-}
-
-.red{
-color:#dc2626;
-}
-
-.blue{
-color:#2563eb;
-}
-
-.purple{
-color:#7c3aed;
-}
-
-/* PANEL */
+.green{color:#15803d}
+.red{color:#dc2626}
+.blue{color:#2563eb}
+.purple{color:#7c3aed}
 
 .panel{
 background:#fff;
@@ -147,17 +101,13 @@ font-size:17px;
 margin-bottom:15px;
 }
 
-/* FORM */
-
 .form-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
 gap:11px;
 }
 
-.full{
-grid-column:1/-1;
-}
+.full{grid-column:1/-1}
 
 label{
 display:block;
@@ -166,7 +116,7 @@ color:#64748b;
 margin-bottom:5px;
 }
 
-input{
+input,select{
 width:100%;
 padding:13px;
 border:1px solid #dbe1e8;
@@ -176,11 +126,9 @@ font-size:13px;
 background:#fff;
 }
 
-input:focus{
+input:focus,select:focus{
 border-color:#64748b;
 }
-
-/* BUTTONS */
 
 .primary{
 width:100%;
@@ -191,14 +139,6 @@ padding:14px;
 border-radius:13px;
 margin-top:12px;
 font-size:13px;
-}
-
-.secondary{
-border:1px solid #dbe1e8;
-background:#fff;
-padding:12px;
-border-radius:12px;
-font-size:12px;
 }
 
 .danger{
@@ -218,8 +158,6 @@ padding:8px 10px;
 border-radius:9px;
 font-size:11px;
 }
-
-/* PRODUCTS */
 
 .product{
 border:1px solid #e5e7eb;
@@ -249,13 +187,9 @@ display:flex;
 gap:5px;
 }
 
-/* SEARCH */
-
 .search{
 margin-bottom:12px;
 }
-
-/* CART */
 
 .invoice-item{
 background:#f8fafc;
@@ -278,7 +212,19 @@ font-size:18px;
 font-weight:bold;
 }
 
-/* EMPTY */
+.discount-box{
+margin-top:12px;
+padding:12px;
+background:#f8fafc;
+border-radius:13px;
+}
+
+.discount-line{
+display:flex;
+justify-content:space-between;
+font-size:12px;
+margin-top:7px;
+}
 
 .empty{
 text-align:center;
@@ -286,8 +232,6 @@ color:#94a3b8;
 padding:28px 5px;
 font-size:13px;
 }
-
-/* MODAL */
 
 .modal{
 position:fixed;
@@ -300,9 +244,7 @@ padding:12px;
 z-index:1000;
 }
 
-.modal.show{
-display:flex;
-}
+.modal.show{display:flex}
 
 .modal-box{
 background:#fff;
@@ -327,8 +269,6 @@ background:#f1f5f9;
 padding:9px 12px;
 border-radius:10px;
 }
-
-/* INVOICE */
 
 .print-invoice{
 background:#fff;
@@ -379,9 +319,7 @@ display:block;
 margin-bottom:5px;
 }
 
-.invoice-number strong{
-font-size:14px;
-}
+.invoice-number strong{font-size:14px}
 
 .invoice-info{
 display:grid;
@@ -422,9 +360,7 @@ padding:11px 7px;
 border-bottom:1px solid #edf0f3;
 }
 
-.invoice-summary{
-padding:15px 18px;
-}
+.invoice-summary{padding:15px 18px}
 
 .summary-line{
 display:flex;
@@ -459,8 +395,6 @@ padding-top:25px;
 border-top:1px dashed #94a3b8;
 }
 
-/* BACKUP */
-
 .backup-grid{
 display:grid;
 grid-template-columns:1fr 1fr;
@@ -485,8 +419,6 @@ font-size:14px;
 color:#64748b;
 font-size:10px;
 }
-
-/* MOBILE */
 
 @media(max-width:430px){
 
@@ -533,14 +465,11 @@ font-size:9px;
 .invoice-table td{
 padding:8px 4px;
 }
-
 }
 
 @media print{
 
-body{
-background:white;
-}
+body{background:white}
 
 body *{
 visibility:hidden;
@@ -562,9 +491,7 @@ width:100%;
 border:0;
 border-radius:0;
 }
-
 }
-
 </style>
 </head>
 
@@ -573,15 +500,9 @@ border-radius:0;
 <div class="app">
 
 <header>
-
 <h1>📒 حسابداری لوازم التحریر سایه</h1>
-
-<p>
-مدیریت کالا، موجودی، فروش، فاکتور و پشتیبان اطلاعات
-</p>
-
+<p>مدیریت کالا، موجودی، فروش، فاکتور و پشتیبان اطلاعات</p>
 </header>
-
 
 <div class="nav">
 
@@ -602,7 +523,6 @@ border-radius:0;
 </button>
 
 </div>
-
 
 <!-- DASHBOARD -->
 
@@ -640,7 +560,6 @@ border-radius:0;
 
 </div>
 
-
 <div class="panel">
 
 <h2>📊 وضعیت انبار</h2>
@@ -667,15 +586,12 @@ border-radius:0;
 
 </div>
 
-
 <div class="panel">
 
 <h2>💾 پشتیبان اطلاعات</h2>
 
 <p style="font-size:11px;color:#64748b;line-height:2;margin-bottom:12px">
-
 با دانلود پشتیبان، تمام کالاها، موجودی‌ها، قیمت‌ها و فاکتورها در یک فایل ذخیره می‌شوند.
-
 </p>
 
 <div class="backup-grid">
@@ -690,8 +606,8 @@ border-radius:0;
 
 </button>
 
-
-<button class="backup-button" onclick="document.getElementById('backupFile').click()">
+<button class="backup-button"
+onclick="document.getElementById('backupFile').click()">
 
 <strong>📤 بازیابی اطلاعات</strong>
 
@@ -713,7 +629,6 @@ onchange="restoreBackup(event)"
 
 </div>
 
-
 <div class="panel">
 
 <h2>⚠️ مدیریت اطلاعات</h2>
@@ -730,7 +645,6 @@ onclick="clearEverything()">
 </div>
 
 </section>
-
 
 <!-- PRODUCTS -->
 
@@ -770,7 +684,6 @@ onclick="clearEverything()">
 
 </div>
 
-
 <div class="panel">
 
 <h2>📦 کالاهای فروشگاه</h2>
@@ -786,7 +699,6 @@ oninput="renderProducts()">
 </div>
 
 </section>
-
 
 <!-- SALE -->
 
@@ -808,10 +720,39 @@ oninput="renderProducts()">
 <input id="saleDate" type="date">
 </div>
 
-</div>
+<div>
+<label>نوع تخفیف</label>
+
+<select id="discountType" onchange="renderCart()">
+
+<option value="amount">
+مبلغ ثابت (تومان)
+</option>
+
+<option value="percent">
+درصدی (%)
+</option>
+
+</select>
 
 </div>
 
+<div>
+<label>مقدار تخفیف</label>
+
+<input
+id="discountValue"
+type="number"
+inputmode="numeric"
+min="0"
+value="0"
+oninput="renderCart()">
+
+</div>
+
+</div>
+
+</div>
 
 <div class="panel">
 
@@ -832,7 +773,6 @@ placeholder="نام کالا">
 
 </div>
 
-
 <div>
 
 <label>تعداد</label>
@@ -849,13 +789,10 @@ value="1">
 </div>
 
 <button class="primary" onclick="addToInvoice()">
-
 ➕ افزودن به فاکتور
-
 </button>
 
 </div>
-
 
 <div class="panel">
 
@@ -866,7 +803,7 @@ value="1">
 <div class="invoice-total">
 
 <span>
-مبلغ کل
+مبلغ قابل پرداخت
 </span>
 
 <span id="cartTotal">
@@ -876,15 +813,12 @@ value="1">
 </div>
 
 <button class="primary" onclick="saveInvoice()">
-
 ✅ ثبت نهایی فاکتور
-
 </button>
 
 </div>
 
 </section>
-
 
 <!-- INVOICES -->
 
@@ -905,7 +839,6 @@ oninput="renderInvoices()">
 </div>
 
 </section>
-
 
 <!-- EDIT PRODUCT -->
 
@@ -969,7 +902,6 @@ oninput="renderInvoices()">
 
 </div>
 
-
 <!-- INVOICE -->
 
 <div class="modal" id="invoiceModal">
@@ -1000,14 +932,10 @@ onclick="window.print()">
 
 </div>
 
-
 <script>
-
-/* STORAGE */
 
 const PRODUCTS_KEY="sayeh_products_final";
 const INVOICES_KEY="sayeh_invoices_final";
-
 
 let products=
 JSON.parse(localStorage.getItem(PRODUCTS_KEY)||"[]");
@@ -1016,9 +944,6 @@ let invoices=
 JSON.parse(localStorage.getItem(INVOICES_KEY)||"[]");
 
 let cart=[];
-
-
-/* HELPERS */
 
 function saveData(){
 
@@ -1034,14 +959,12 @@ JSON.stringify(invoices)
 
 }
 
-
 function fa(n){
 
 return Number(n||0)
 .toLocaleString("fa-IR");
 
 }
-
 
 function today(){
 
@@ -1050,7 +973,6 @@ return new Date()
 .slice(0,10);
 
 }
-
 
 function escapeHTML(text){
 
@@ -1068,7 +990,6 @@ return {
 });
 
 }
-
 
 /* NAV */
 
@@ -1095,9 +1016,7 @@ renderAll();
 
 });
 
-
 document.getElementById("saleDate").value=today();
-
 
 /* PRODUCTS */
 
@@ -1116,7 +1035,6 @@ Number(document.getElementById("sellPrice").value);
 let stock=
 Number(document.getElementById("stock").value)||0;
 
-
 if(!name){
 
 alert("نام کالا را وارد کنید.");
@@ -1124,7 +1042,6 @@ alert("نام کالا را وارد کنید.");
 return;
 
 }
-
 
 if(sell<=0||buy<0||stock<0){
 
@@ -1134,12 +1051,10 @@ return;
 
 }
 
-
 let duplicate=
 products.some(
 p=>p.name.toLowerCase()===name.toLowerCase()
 );
-
 
 if(duplicate){
 
@@ -1148,7 +1063,6 @@ alert("این کالا قبلاً ثبت شده است.");
 return;
 
 }
-
 
 products.push({
 
@@ -1164,7 +1078,6 @@ stock:stock
 
 });
 
-
 saveData();
 
 document.getElementById("productName").value="";
@@ -1178,7 +1091,6 @@ alert("کالا با موفقیت ثبت شد ✅");
 
 }
 
-
 function renderProducts(){
 
 let q=
@@ -1186,13 +1098,13 @@ let q=
 .trim()
 .toLowerCase();
 
-let list=document.getElementById("productList");
+let list=
+document.getElementById("productList");
 
 let arr=
 products.filter(
 p=>p.name.toLowerCase().includes(q)
 );
-
 
 if(!arr.length){
 
@@ -1203,7 +1115,6 @@ return;
 
 }
 
-
 list.innerHTML=arr.map(p=>`
 
 <div class="product">
@@ -1211,9 +1122,7 @@ list.innerHTML=arr.map(p=>`
 <div>
 
 <div class="product-name">
-
 ${escapeHTML(p.name)}
-
 </div>
 
 <div class="product-info">
@@ -1242,17 +1151,13 @@ ${fa(p.sellPrice)}
 <button
 class="success"
 onclick="editProduct('${p.id}')">
-
 ✏️
-
 </button>
 
 <button
 class="danger"
 onclick="deleteProduct('${p.id}')">
-
 🗑
-
 </button>
 
 </div>
@@ -1265,7 +1170,6 @@ updateProductOptions();
 
 }
 
-
 function updateProductOptions(){
 
 let options=
@@ -1277,7 +1181,6 @@ p=>`<option value="${escapeHTML(p.name)}">`
 ).join("");
 
 }
-
 
 function editProduct(id){
 
@@ -1296,7 +1199,6 @@ document.getElementById("productModal")
 .classList.add("show");
 
 }
-
 
 function saveEditProduct(){
 
@@ -1321,7 +1223,6 @@ Number(document.getElementById("editSell").value);
 let stock=
 Number(document.getElementById("editStock").value);
 
-
 if(!name||sell<=0||buy<0||stock<0){
 
 alert("اطلاعات صحیح نیست.");
@@ -1329,7 +1230,6 @@ alert("اطلاعات صحیح نیست.");
 return;
 
 }
-
 
 p.name=name;
 p.buyPrice=buy;
@@ -1344,7 +1244,6 @@ renderAll();
 
 }
 
-
 function deleteProduct(id){
 
 let p=
@@ -1352,9 +1251,7 @@ products.find(x=>x.id===id);
 
 if(!p)return;
 
-if(!confirm(
-"این کالا حذف شود؟"
-))return;
+if(!confirm("این کالا حذف شود؟"))return;
 
 products=
 products.filter(x=>x.id!==id);
@@ -1365,7 +1262,6 @@ renderAll();
 
 }
 
-
 function closeProductModal(){
 
 document.getElementById("productModal")
@@ -1373,8 +1269,60 @@ document.getElementById("productModal")
 
 }
 
-
 /* CART */
+
+function getCartSubtotal(){
+
+return cart.reduce(
+(s,x)=>s+(x.qty*x.price),
+0
+);
+
+}
+
+function getDiscount(subtotal){
+
+let value=
+Number(
+document.getElementById("discountValue")?.value
+)||0;
+
+let type=
+document.getElementById("discountType")?.value
+||"amount";
+
+if(value<0)value=0;
+
+if(type==="percent"){
+
+value=Math.min(value,100);
+
+return Math.min(
+subtotal,
+Math.round(subtotal*value/100)
+);
+
+}
+
+return Math.min(
+subtotal,
+Math.round(value)
+);
+
+}
+
+function getCartTotal(){
+
+let subtotal=getCartSubtotal();
+
+let discount=getDiscount(subtotal);
+
+return Math.max(
+0,
+subtotal-discount
+);
+
+}
 
 function addToInvoice(){
 
@@ -1385,7 +1333,6 @@ document.getElementById("saleProduct")
 let qty=
 Number(document.getElementById("saleQty").value);
 
-
 if(!name||qty<=0){
 
 alert("نام کالا و تعداد را وارد کنید.");
@@ -1394,12 +1341,10 @@ return;
 
 }
 
-
 let product=
 products.find(
 p=>p.name.toLowerCase()===name.toLowerCase()
 );
-
 
 if(!product){
 
@@ -1411,7 +1356,6 @@ return;
 
 }
 
-
 if(product.stock<=0){
 
 alert(
@@ -1422,16 +1366,13 @@ return;
 
 }
 
-
 let existing=
 cart.find(
 x=>x.productId===product.id
 );
 
-
 let oldQty=
 existing?existing.qty:0;
-
 
 if(oldQty+qty>product.stock){
 
@@ -1444,7 +1385,6 @@ fa(product.stock)
 return;
 
 }
-
 
 if(existing){
 
@@ -1466,14 +1406,12 @@ price:product.sellPrice
 
 }
 
-
 document.getElementById("saleProduct").value="";
 document.getElementById("saleQty").value="1";
 
 renderCart();
 
 }
-
 
 function renderCart(){
 
@@ -1492,9 +1430,7 @@ return;
 
 }
 
-
 let total=0;
-
 
 box.innerHTML=
 cart.map((item,index)=>{
@@ -1503,7 +1439,6 @@ let sum=
 item.qty*item.price;
 
 total+=sum;
-
 
 return `
 
@@ -1551,13 +1486,33 @@ onclick="removeCart(${index})">
 
 }).join("");
 
+let discount=getDiscount(total);
 
-document.getElementById("cartTotal")
-.textContent=
-fa(total)+" تومان";
+let finalTotal=
+Math.max(
+0,
+total-discount
+);
+
+let totalBox=
+document.getElementById("cartTotal");
+
+totalBox.innerHTML=`
+<div>
+${fa(finalTotal)} تومان
+<div style="
+font-size:11px;
+color:#64748b;
+font-weight:normal;
+margin-top:6px;
+line-height:1.8">
+جمع: ${fa(total)} تومان<br>
+تخفیف: ${fa(discount)} تومان
+</div>
+</div>
+`;
 
 }
-
 
 function removeCart(index){
 
@@ -1566,7 +1521,6 @@ cart.splice(index,1);
 renderCart();
 
 }
-
 
 /* SAVE INVOICE */
 
@@ -1591,7 +1545,6 @@ return "SF-"+String(max+1)
 
 }
 
-
 function saveInvoice(){
 
 if(!cart.length){
@@ -1601,7 +1554,6 @@ alert("فاکتور خالی است.");
 return;
 
 }
-
 
 for(let item of cart){
 
@@ -1630,13 +1582,17 @@ return;
 
 }
 
+let subtotal=
+getCartSubtotal();
+
+let discount=
+getDiscount(subtotal);
 
 let total=
-cart.reduce(
-(s,x)=>s+(x.qty*x.price),
-0
+Math.max(
+0,
+subtotal-discount
 );
-
 
 let invoice={
 
@@ -1655,12 +1611,15 @@ document.getElementById("saleDate")
 items:
 JSON.parse(JSON.stringify(cart)),
 
+subtotal:subtotal,
+
+discount:discount,
+
 total:total,
 
 created:Date.now()
 
 };
-
 
 cart.forEach(item=>{
 
@@ -1673,7 +1632,6 @@ p.stock-=item.qty;
 
 });
 
-
 invoices.push(invoice);
 
 saveData();
@@ -1681,15 +1639,16 @@ saveData();
 cart=[];
 
 document.getElementById("customerName").value="";
-
 document.getElementById("saleProduct").value="";
+document.getElementById("saleQty").value="1";
+document.getElementById("discountValue").value="0";
+document.getElementById("discountType").value="amount";
 
 renderAll();
 
 showInvoice(invoice);
 
 }
-
 
 /* INVOICES */
 
@@ -1703,7 +1662,6 @@ let q=
 let list=
 document.getElementById("invoiceList");
 
-
 let arr=
 invoices
 .filter(x=>
@@ -1711,8 +1669,9 @@ invoices
 .toLowerCase()
 .includes(q)
 )
-.sort((a,b)=>b.created-a.created);
-
+.sort(
+(a,b)=>b.created-a.created
+);
 
 if(!arr.length){
 
@@ -1722,7 +1681,6 @@ list.innerHTML=
 return;
 
 }
-
 
 list.innerHTML=
 arr.map(x=>`
@@ -1752,17 +1710,21 @@ ${escapeHTML(x.date)}
 تعداد اقلام:
 ${fa(x.items.length)}
 
-</div>
+<br>
+
+تخفیف:
+${fa(x.discount||0)}
+تومان
 
 </div>
 
+</div>
 
 <div style="text-align:left">
 
 <strong class="green">
 
 ${fa(x.total)}
-
 تومان
 
 </strong>
@@ -1785,7 +1747,6 @@ onclick="showInvoiceById('${x.id}')">
 
 }
 
-
 function showInvoiceById(id){
 
 let invoice=
@@ -1799,14 +1760,22 @@ showInvoice(invoice);
 
 }
 
-
-/* BEAUTIFUL INVOICE */
+/* INVOICE */
 
 function showInvoice(invoice){
 
 let area=
 document.getElementById("printArea");
 
+let subtotal=
+invoice.subtotal ??
+invoice.items.reduce(
+(s,x)=>s+x.qty*x.price,
+0
+);
+
+let discount=
+invoice.discount||0;
 
 let rows=
 invoice.items.map((item,index)=>`
@@ -1835,7 +1804,6 @@ ${fa(item.qty*item.price)}
 
 `).join("");
 
-
 area.innerHTML=`
 
 <div class="print-invoice">
@@ -1856,7 +1824,6 @@ area.innerHTML=`
 
 </div>
 
-
 <div class="invoice-number">
 
 <small>
@@ -1871,7 +1838,6 @@ ${escapeHTML(invoice.number)}
 
 </div>
 
-
 <div class="invoice-info">
 
 <div class="info-box">
@@ -1884,7 +1850,6 @@ ${escapeHTML(invoice.date)}
 
 </div>
 
-
 <div class="info-box">
 
 مشتری
@@ -1896,7 +1861,6 @@ ${escapeHTML(invoice.customer)}
 </div>
 
 </div>
-
 
 <table class="invoice-table">
 
@@ -1922,7 +1886,6 @@ ${rows}
 
 </table>
 
-
 <div class="invoice-summary">
 
 <div class="summary-line">
@@ -1937,6 +1900,32 @@ ${fa(invoice.items.length)}
 
 </div>
 
+<div class="summary-line">
+
+<span>
+جمع کالاها
+</span>
+
+<span>
+${fa(subtotal)}
+تومان
+</span>
+
+</div>
+
+<div class="summary-line"
+style="color:#15803d">
+
+<span>
+تخفیف
+</span>
+
+<span>
+− ${fa(discount)}
+تومان
+</span>
+
+</div>
 
 <div class="summary-final">
 
@@ -1953,7 +1942,6 @@ ${fa(invoice.total)}
 
 </div>
 
-
 <div class="invoice-footer">
 
 <div class="signature">
@@ -1966,19 +1954,16 @@ ${fa(invoice.total)}
 
 </div>
 
-
 </div>
 
 </div>
 
 `;
 
-
 document.getElementById("invoiceModal")
 .classList.add("show");
 
 }
-
 
 function closeInvoiceModal(){
 
@@ -1986,7 +1971,6 @@ document.getElementById("invoiceModal")
 .classList.remove("show");
 
 }
-
 
 /* DASHBOARD */
 
@@ -1998,9 +1982,7 @@ invoices.reduce(
 0
 );
 
-
 let profit=0;
-
 
 invoices.forEach(invoice=>{
 
@@ -2021,13 +2003,11 @@ profit+=
 
 });
 
-
 let stockValue=
 products.reduce(
 (s,p)=>s+(p.buyPrice*p.stock),
 0
 );
-
 
 document.getElementById("dashSales")
 .textContent=
@@ -2051,7 +2031,6 @@ fa(stockValue)+" تومان";
 
 }
 
-
 /* BACKUP */
 
 function downloadBackup(){
@@ -2060,9 +2039,10 @@ let backup={
 
 app:"Sayeh Accounting",
 
-version:1,
+version:2,
 
-exportDate:new Date().toISOString(),
+exportDate:
+new Date().toISOString(),
 
 products:products,
 
@@ -2070,9 +2050,12 @@ invoices:invoices
 
 };
 
-
 let json=
-JSON.stringify(backup,null,2);
+JSON.stringify(
+backup,
+null,
+2
+);
 
 let blob=
 new Blob(
@@ -2080,10 +2063,8 @@ new Blob(
 {type:"application/json"}
 );
 
-
 let url=
 URL.createObjectURL(blob);
-
 
 let a=
 document.createElement("a");
@@ -2106,13 +2087,11 @@ setTimeout(
 1000
 );
 
-
 alert(
 "✅ کل اطلاعات با موفقیت دانلود شد."
 );
 
 }
-
 
 /* RESTORE */
 
@@ -2123,10 +2102,8 @@ event.target.files[0];
 
 if(!file)return;
 
-
 let reader=
 new FileReader();
-
 
 reader.onload=()=>{
 
@@ -2134,7 +2111,6 @@ try{
 
 let backup=
 JSON.parse(reader.result);
-
 
 if(
 !backup ||
@@ -2145,7 +2121,6 @@ if(
 throw new Error();
 
 }
-
 
 if(
 !confirm(
@@ -2159,7 +2134,6 @@ return;
 
 }
 
-
 products=backup.products;
 
 invoices=backup.invoices;
@@ -2170,12 +2144,12 @@ saveData();
 
 renderAll();
 
-
 alert(
 "✅ تمام اطلاعات با موفقیت بازیابی شد."
 );
 
 }
+
 catch{
 
 alert(
@@ -2192,7 +2166,6 @@ reader.readAsText(file);
 
 }
 
-
 /* CLEAR */
 
 function clearEverything(){
@@ -2201,11 +2174,9 @@ if(!confirm(
 "⚠️ تمام کالاها، فاکتورها و اطلاعات حذف شوند؟"
 ))return;
 
-
 if(!confirm(
 "این کار قابل برگشت نیست. مطمئنی؟"
 ))return;
-
 
 products=[];
 
@@ -2223,7 +2194,6 @@ alert(
 
 }
 
-
 /* INITIAL */
 
 function renderAll(){
@@ -2237,7 +2207,6 @@ renderInvoices();
 renderDashboard();
 
 }
-
 
 renderAll();
 
